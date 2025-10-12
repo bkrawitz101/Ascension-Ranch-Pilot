@@ -7,10 +7,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-      "preview": "vite preview",
-      "clean": "rm -rf node_modules/.cache/gh-pages",
-      "predeploy": "npm run build",
-      "deploy": "npm run clean && gh-pages -d dist"
+    "preview": "vite preview"
   },
   "dependencies": {
     "firebase": "^10.12.2",
@@ -23,7 +20,6 @@
     "@vitejs/plugin-react": "^4.3.1",
     "autoprefixer": "^10.4.19",
     "postcss": "^8.4.38",
-    "gh-pages": "^6.1.1",
     "tailwindcss": "^3.4.4",
     "vite": "^5.3.1"
   }

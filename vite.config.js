@@ -3,16 +3,6 @@ import react from '@vitejs/plugin-react'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/Ascension-Ranch-Pilot/',
+  base: '/<repository-name>/', // IMPORTANT: Replace <repository-name> with your repository name
   plugins: [react()],
-  server: {
-    proxy: {
-      // Proxy API requests
-      '/api': {
-        target: 'http://your-backend-api.com', // 👈 Replace this with your actual backend API URL
-        changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api/, ''),
-      },
-    },
-  },
 })

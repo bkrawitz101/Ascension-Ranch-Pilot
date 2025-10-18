@@ -28,12 +28,12 @@ import {
 // The app will show a "Configuration Error" until this is filled out correctly.
 // =================================================================================
 const firebaseConfig = {
-  apiKey: "AIzaSyAXYFBbjkTPcbJ7hXbV4HZtI_xReX0PIVM",
-  authDomain: "ascension-ranch-pilot.firebaseapp.com",
-  projectId: "ascension-ranch-pilot",
-  storageBucket: "ascension-ranch-pilot.appspot.com",
-  messagingSenderId: "1005741981843",
-  appId: "1:1005741981843:web:03d6506bf11cfb59b78d66"
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID
 };
 
 // Hardcoded App ID as per requirements
@@ -647,7 +647,7 @@ export default function App() {
 
     // Firebase Initialization and Authentication Effect
     useEffect(() => {
-        if (!firebaseConfig.apiKey || firebaseConfig.apiKey === "YOUR_API_KEY") {
+        if (!firebaseConfig.apiKey) {
             setError("Connection Error: Could not connect to the Firestore database. Please check your configuration.");
             setLoading(false);
             return;

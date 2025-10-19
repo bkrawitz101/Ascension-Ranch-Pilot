@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://bk-samples.github.io/Ascension-Ranch-Pilot/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

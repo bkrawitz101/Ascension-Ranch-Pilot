@@ -5,4 +5,11 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   base: '/Ascension-Ranch-Pilot/',
   plugins: [react()],
+  esbuild: {
+    loader: 'jsx',
+    include: [
+      'src/**/*.jsx',
+      'src/**/*.js',
+    ],
+  },
 })
